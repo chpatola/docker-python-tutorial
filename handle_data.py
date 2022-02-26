@@ -2,11 +2,12 @@
 add column to it and write to output container.'''
 
 from os import environ
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import pandas as pd
 from azure.storage.blob import ContainerClient
 
-load_dotenv()
+
+#load_dotenv()
 
 # Read base data via blob sas url
 course_feedback = pd.read_csv(environ.get('URL_TO_INPUT_BLOB'))

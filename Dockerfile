@@ -1,7 +1,5 @@
 FROM python:3.9.10
 
-RUN
-
 WORKDIR /usr/src/handle_data
 
 COPY requirements.txt ./
