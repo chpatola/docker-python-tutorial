@@ -12,7 +12,7 @@ In this tutorial, base data is read from an Azure container, a column is added a
 6. Build the image:```docker image build . -t <the_name_you_want_to_give_the_image>```
 
 ### Useage instructions
- Run the container from the image: ```docker run --env-file .env -it -v "$(pwd):/usr/src/handle_data" --name <the_name_you_want_to_give_the_container> <image_name>```
+ Run the container from the image: ```docker run --env-file .env -it -v "$(pwd)/data:/handle_data/data" --name <the_name_you_want_to_give_the_container> <image_name>```
  
  
  **In Azure Storage Account, you find the SAS URL:s by left clicking on the file/container and choosing "Generate SAS". Make sure you give the access for long enough time and tick all rights you need (read, write..).*
