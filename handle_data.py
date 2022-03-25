@@ -15,7 +15,7 @@ course_feedback = pd.read_csv(environ.get('URL_TO_INPUT_BLOB'))
 course_feedback['Overall'] = course_feedback.iloc[:, 4:7].mean(axis=1).round(2)
 
 # Write new dataframe to csv locally
-LOCAL_FILEPATH = '/usr/src/handle_data/data/course_feedback_finished.csv'
+LOCAL_FILEPATH = './data/course_feedback_finished.csv'
 course_feedback.to_csv(LOCAL_FILEPATH, encoding='utf-8', index=False)
 
 #Write local csv to Azure blob
